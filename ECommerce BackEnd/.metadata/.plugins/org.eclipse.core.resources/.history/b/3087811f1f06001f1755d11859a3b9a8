@@ -1,0 +1,12 @@
+package com.pack.services;
+
+import java.util.List;
+
+import com.pack.entities.Cart;
+import com.pack.entities.Products;
+
+public interface CartService {
+
+	public Cart addToCart(Cart cart);
+	 List<Cart> getAllCartItems(Products products);
+}

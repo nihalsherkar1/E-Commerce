@@ -1,0 +1,36 @@
+package com.pack.services;
+
+ 
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.pack.entities.Cart;
+ 
+import com.pack.repository.CartRepository;
+
+@Service
+public class CartServiceImpl implements CartService {
+
+	@Autowired
+	private CartRepository cartRepository;
+
+	@Override
+	public void addToCart(Long productId, Long userId) {
+		 
+		Cart cart=new Cart();
+		cart.setProductId(productId);
+		
+	}
+
+	 
+
+	 
+
+	 
+
+ 
+	
+}

@@ -1,0 +1,22 @@
+package com.pack.services;
+
+import java.util.List;
+
+import com.pack.entities.User;
+
+public interface UserService {
+
+	
+	public User saveUser(User user);
+	
+	public List<User> getAllUsers( );
+	
+	public User getUserById(Long id);
+	
+	public User updateUser(Long id, User user);
+	
+	public String deleteUser(Long id);
+	
+	public Boolean signIn(String email,String password);
+	
+}

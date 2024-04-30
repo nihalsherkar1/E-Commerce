@@ -1,0 +1,14 @@
+package com.pack.dto;
+
+public class SignInDTO {
+
+	private String email;
+	private String password;
+	public SignInDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+}

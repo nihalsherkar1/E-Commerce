@@ -1,0 +1,8 @@
+package com.pack.services;
+
+import com.pack.entities.Cart;
+
+public interface CartService {
+
+	public Cart addToCart(Cart cart);
+}

@@ -1,0 +1,49 @@
+package com.pack.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.pack.entities.Products;
+import com.pack.repository.ProductRepository;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+	@Autowired
+	private ProductRepository productRepository;
+
+	@Override
+	public Products addProducts(Products products) {
+		 
+		return productRepository.save(products);
+	}
+
+	@Override
+	public List<Products> getAllProducts() {
+		
+	  Products data =	productRepository.findAll();
+		
+		return null;
+	}
+
+	@Override
+	public Products getProductById(Long pid) {
+		 
+		return null;
+	}
+
+	@Override
+	public Products updateProducts(Long pid) {
+		 
+		return null;
+	}
+
+	@Override
+	public void deleteProduct(Long pid) {
+		 
+	}
+	
+	
+}

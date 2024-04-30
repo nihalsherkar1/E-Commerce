@@ -1,0 +1,6 @@
+package com.pack.services;
+
+public interface CartServices {
+
+	public void addToCart(Long pId,Long uId);
+}

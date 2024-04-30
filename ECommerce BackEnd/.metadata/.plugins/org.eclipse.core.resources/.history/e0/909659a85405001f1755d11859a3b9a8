@@ -1,0 +1,22 @@
+package com.pack.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pack.entities.Products;
+import com.pack.services.ProductService;
+
+@RestController
+public class ProductController {
+
+	@Autowired
+	private ProductService productService;
+	
+	public ResponseEntity<Products> addProducts(@RequestBody Products products){
+		
+		return null;
+	}
+	
+}

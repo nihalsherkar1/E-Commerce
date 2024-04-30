@@ -1,0 +1,9 @@
+package com.pack.services;
+
+import com.pack.entities.Products;
+
+public interface ProductService {
+
+	public Products addProducts(Products products);
+	
+}

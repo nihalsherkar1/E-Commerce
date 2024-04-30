@@ -1,0 +1,14 @@
+package com.pack.services;
+
+ 
+
+ 
+ 
+
+public interface CartService {
+
+//	public Cart addToCart(Cart cart);
+//	public List<Cart> items();
+	
+	public void addToCart(Long productId, Long userId);
+}

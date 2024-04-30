@@ -1,0 +1,8 @@
+package com.pack.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface CartRepository {
+
+}

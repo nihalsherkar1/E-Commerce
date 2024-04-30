@@ -1,0 +1,5 @@
+package com.pack.dto;
+
+public class SignInDTO {
+
+}

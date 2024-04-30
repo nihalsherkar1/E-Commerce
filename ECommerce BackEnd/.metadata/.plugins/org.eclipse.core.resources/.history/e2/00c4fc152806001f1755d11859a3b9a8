@@ -1,0 +1,16 @@
+package com.pack.services;
+
+ 
+
+import java.util.List;
+
+import com.pack.entities.Cart;
+ 
+
+public interface CartService {
+
+//	public Cart addToCart(Cart cart);
+//	public List<Cart> items();
+	
+	public addToCart(Long productId, Long userId);
+}

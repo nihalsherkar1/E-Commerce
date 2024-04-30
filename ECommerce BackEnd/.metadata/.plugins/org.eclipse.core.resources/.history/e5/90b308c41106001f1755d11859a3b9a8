@@ -1,0 +1,12 @@
+package com.pack.services;
+
+import java.util.List;
+
+import com.pack.response.UserCartResponse;
+
+public interface CartServices {
+
+	public void addToCart(Long pId,Long uId);
+	public void removeFromCart(Long pId,Long uId);
+	List<UserCartResponse> getCartByUser(Long uId);
+}

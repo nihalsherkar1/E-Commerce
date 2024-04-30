@@ -1,0 +1,21 @@
+package com.pack.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pack.entities.Cart;
+import com.pack.services.CartService;
+
+@RestController
+public class CartController {
+
+	@Autowired
+	private CartService cartService;
+	
+	public ResponseEntity<Cart>addToCart(@RequestBody Cart cart){
+		
+		Cart data=cartService.addToCart(cart);
+	}
+}

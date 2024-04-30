@@ -1,0 +1,64 @@
+package com.pack.entities;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity 
+public class Products {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@Column(name = "productname")
+	private String productname;
+	
+	private Double price;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getProductName() {
+		return productname;
+	}
+
+	public void setProductName(String productname) {
+		this.productname = productname;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	public Products(Long id, String productName, Double price) {
+		super();
+		this.id = id;
+		this.productname = productname;
+		this.price = price;
+	}
+
+	public Products() {
+		super();
+		 
+	}
+
+	@Override
+	public String toString() {
+		return "Products [id=" + id + ", productName=" + productname + ", price=" + price + "]";
+	}
+	
+	
+	
+}

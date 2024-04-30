@@ -1,0 +1,17 @@
+package com.pack.services;
+
+import java.util.List;
+
+import com.pack.entities.Products;
+
+public interface ProductService {
+
+	public Products addProducts(Products products);
+	
+	public List<Products> getAllProducts();
+	
+	public Products updateProducts(Long pid);
+	
+	public Boolean deleteProduct(Long pid);
+	
+}

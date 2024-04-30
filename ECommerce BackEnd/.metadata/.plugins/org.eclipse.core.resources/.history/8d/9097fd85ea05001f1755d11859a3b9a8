@@ -1,0 +1,8 @@
+package com.pack.dto;
+
+public class SignInDTO {
+
+	private String email;
+	private String password;
+	
+}

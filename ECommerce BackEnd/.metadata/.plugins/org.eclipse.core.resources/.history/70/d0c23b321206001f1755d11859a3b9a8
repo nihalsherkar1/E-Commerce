@@ -1,0 +1,63 @@
+package com.pack.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pack.response.UserCartResponse;
+import com.pack.services.CartServices;
+
+@RestController
+@RequestMapping("/cart")
+public class CartController {
+	
+	@Autowired
+	private CartServices cartServices;
+	
+//	@PostMapping("/add")
+//    public ResponseEntity<Void> addToCart(@RequestParam("productId") Long productId, @RequestParam("userId") Long userId) {
+//        cartServices.addToCart(productId, userId);
+//        return ResponseEntity.status(HttpStatus.CREATED).build();
+//    }
+//
+//    @DeleteMapping("/remove")
+//    public ResponseEntity<Void> removeFromCart(@RequestParam Long productId, @RequestParam Long userId) {
+//        cartServices.removeFromCart(productId, userId);
+//        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+//    }
+//
+//    @GetMapping("/{userId}")
+//    public ResponseEntity<List<UserCartResponse>> getCartByUser(@PathVariable Long userId) {
+//        List<UserCartResponse> cartItems = cartServices.getCartByUser(userId);
+//        return ResponseEntity.ok(cartItems);
+//    }
+	
+	 @PostMapping("/add/{productId}/{userId}")
+	    public ResponseEntity<Void> addToCart(@PathVariable Long productId, @PathVariable Long userId) {
+	        cartServices.addToCart(productId, userId);
+	        return ResponseEntity.status(HttpStatus.CREATED).build();
+	    }
+
+	    @DeleteMapping("/delete/{productId}/{userId}")
+	    public ResponseEntity<Void> removeFromCart(@PathVariable Long productId, @PathVariable Long userId) {
+	        cartServices.removeFromCart(productId, userId);
+	        return ResponseEntity.noContent().build();
+	    }
+
+	    @GetMapping("/{userId}")
+	    public ResponseEntity<List<UserCartResponse>> getCartByUser(@PathVariable Long userId) {
+	        List<UserCartResponse> cart = cartServices.getCartByUser(userId);
+	        return new ResponseEntity<>(cart, HttpStatus.OK);
+	    }
+	
+	
+}
