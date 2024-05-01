@@ -44,7 +44,7 @@ public class ProductServiceImpl implements ProductService {
 		Products product = productRepository.findById(pid).orElse(null);
 		
 		if(product != null) {
-		    product.setProductname(updatedProduct.getProductname());
+		    product.setProductname(null);
 		    product.setPrice(updatedProduct.getPrice());
 		    
 		    return productRepository.save(product);

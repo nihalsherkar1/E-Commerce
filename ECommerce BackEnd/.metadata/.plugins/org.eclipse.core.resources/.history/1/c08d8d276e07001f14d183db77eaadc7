@@ -82,8 +82,6 @@ public class UserServiceImpl implements UserService  {
 		
 		/* Here check User getting null and user password  matching with password saved in DB   */
 		if(user != null && user.getPassword().equals(password)) {
-			
-			/* user and password match it will return the user */
 			return user;
 		}
 		

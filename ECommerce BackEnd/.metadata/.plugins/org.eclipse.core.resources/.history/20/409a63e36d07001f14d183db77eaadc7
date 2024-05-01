@@ -77,13 +77,10 @@ public class UserServiceImpl implements UserService  {
 	@Override
 	public User signIn(String email, String password) {
 		
-		/* Here user find user using email*/
+		/* Here he find user using email*/
 		User user=userRepository.findByEmail(email);
 		
-		/* Here check User getting null and user password  matching with password saved in DB   */
 		if(user != null && user.getPassword().equals(password)) {
-			
-			/* user and password match it will return the user */
 			return user;
 		}
 		
